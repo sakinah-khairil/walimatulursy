@@ -198,6 +198,9 @@
             <source src="media/sound.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
             </audio>
+
+            <div class="flower-dynamic-container" id="flowerContainer"></div>
+
         </main>
     </div>
 
@@ -304,5 +307,36 @@
             $('body').sakura();
         });
     </script>
+    <script>
+    // path gambar bunga (boleh pakai file lain, misal img/flower3.png)
+    const FLOWER_IMAGE = "img/flower1.png";
+
+    const container = document.getElementById("flowerContainer");
+
+    function spawnFlower() {
+        const flower = document.createElement("img");
+        flower.src = FLOWER_IMAGE;
+        flower.className = "flower-float";
+
+        // posisi random di lebar layar (0%–100%)
+        const randomLeft = Math.random() * 100;
+        flower.style.left = randomLeft + "%";
+
+        // sedikit variasi ukuran
+        const randomScale = 0.8 + Math.random() * 0.6; // 0.8 – 1.4
+        flower.style.transform = `scale(${randomScale})`;
+
+        container.appendChild(flower);
+
+        // hapus elemen setelah animasi selesai (4 detik)
+        setTimeout(() => {
+        flower.remove();
+        }, 4000);
+    }
+
+    // panggil setiap 800 ms (0.8 detik) → bisa diubah lebih cepat / lambat
+    setInterval(spawnFlower, 800);
+    </script>
+
 </body>
 </html>

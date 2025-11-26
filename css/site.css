@@ -1,6 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+body {
+    background: radial-gradient(circle at top, #7b1e24 0%, #3a0608 55%, #230203 100%);
+}
+
 
 .putih{
   color: #fff
@@ -437,4 +441,44 @@ div + .header3 {
 
 main .nonmoslem{
   display: none;
+}
+
+/* Container di ujung bawah undangan */
+.flower-dynamic-container {
+    position: fixed;       /* kalau mau ikut layar, pakai fixed */
+    bottom: 70px;          /* atur jarak dari bawah (misal di atas tombol musik) */
+    left: 0;
+    width: 100%;
+    pointer-events: none;  /* biar tidak mengganggu klik */
+    z-index: 20;
+    overflow: visible;
+}
+
+/* Bunga yang muncul */
+.flower-float {
+    position: absolute;
+    bottom: 0;
+    width: 92px;           /* boleh disesuaikan */
+    opacity: 0;
+    animation: bloomUp 4s ease-in-out forwards;
+}
+
+/* Animasi: muncul – naik sedikit – hilang */
+@keyframes bloomUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.5);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
 }
