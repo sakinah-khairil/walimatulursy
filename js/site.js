@@ -118,6 +118,23 @@ for (let className in namaClass) {
 }
 
 
+// const audio = document.getElementById("audio");
+// const control = document.getElementById("media-control");
+// const icon = document.getElementById("media-icon");
+
+// control.addEventListener("click", function () {
+//     if (audio.paused) {
+//         audio.play();
+//         control.classList.add("playing");
+//         icon.classList.remove("bi-music-note-beamed");
+//         icon.classList.add("bi-pause-fill");
+//     } else {
+//         audio.pause();
+//         control.classList.remove("playing");
+//         icon.classList.remove("bi-pause-fill");
+//         icon.classList.add("bi-music-note-beamed");
+//     }
+// });
 
 
 
