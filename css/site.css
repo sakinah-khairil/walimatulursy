@@ -446,7 +446,7 @@ main .nonmoslem{
 /* Container di ujung bawah undangan */
 .flower-dynamic-container {
     position: fixed;       /* kalau mau ikut layar, pakai fixed */
-    bottom: 70px;          /* atur jarak dari bawah (misal di atas tombol musik) */
+    bottom: 20px;          /* atur jarak dari bawah (misal di atas tombol musik) */
     left: 0;
     width: 100%;
     pointer-events: none;  /* biar tidak mengganggu klik */
